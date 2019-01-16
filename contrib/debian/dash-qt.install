@@ -1,6 +1,6 @@
-usr/local/bin/dash-qt usr/bin
-share/pixmaps/dash32.xpm usr/share/pixmaps
-share/pixmaps/dash16.xpm usr/share/pixmaps
-share/pixmaps/dash128.png usr/share/pixmaps
-debian/dash-qt.desktop usr/share/applications
-debian/dash-qt.protocol usr/share/kde4/services/
+usr/local/bin/scope-qt usr/bin
+share/pixmaps/scope32.xpm usr/share/pixmaps
+share/pixmaps/scope16.xpm usr/share/pixmaps
+share/pixmaps/scope128.png usr/share/pixmaps
+debian/scope-qt.desktop usr/share/applications
+debian/scope-qt.protocol usr/share/kde4/services/

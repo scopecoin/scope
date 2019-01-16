@@ -3,13 +3,13 @@ Description=Dash's distributed currency daemon
 After=network.target
 
 [Service]
-User=dashcore
-Group=dashcore
+User=scopecoin
+Group=scopecoin
 
 Type=forking
-PIDFile=/var/lib/dashd/dashd.pid
-ExecStart=/usr/bin/dashd -daemon -pid=/var/lib/dashd/dashd.pid \
--conf=/etc/dashcore/dash.conf -datadir=/var/lib/dashd -disablewallet
+PIDFile=/var/lib/scoped/scoped.pid
+ExecStart=/usr/bin/scoped -daemon -pid=/var/lib/scoped/scoped.pid \
+-conf=/etc/scopecoin/scope.conf -datadir=/var/lib/scoped -disablewallet
 
 Restart=always
 PrivateTmp=true

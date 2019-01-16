@@ -1,8 +1,8 @@
-// Copyright (c) 2014-2017 The Dash Core developers
+// %%copyleft%%
 
 #include "cachemap.h"
 
-#include "test/test_dash.h"
+#include "test/test_scope.h"
 
 #include <boost/test/unit_test.hpp>
 
