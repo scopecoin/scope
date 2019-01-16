@@ -117,7 +117,7 @@ public:
         pchMessageStart[2] = 0x00;
         pchMessageStart[3] = 0x0e;
         vAlertPubKey = ParseHex("0424ccf1004d82da5b84c1a17f84a9e5d580895a118729addad09741967fc719d73d33a0b89068ffbe03e757a444bd03e65b44eebf218a26232901707a58664ac9v");
-        nDefaultPort = 9999;
+        nDefaultPort = 5121;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nPruneAfterHeight = 100000;
 
@@ -215,7 +215,7 @@ public:
         pchMessageStart[2] = 0xca;
         pchMessageStart[3] = 0xff;
         vAlertPubKey = ParseHex("042e03069c46861cc05d5dab9114d492836df9cbaf366c6c54791ed66728dd786afefb39a326defea296b72c9d1bf5e6d7ef761279749c96578929c1a4a75a7359");
-        nDefaultPort = 19999;
+        nDefaultPort = 15121;
         nMaxTipAge = 0x7fffffff; // allow mining on top of old blocks for testnet
         nPruneAfterHeight = 1000;
 
