@@ -190,7 +190,10 @@ void CMasternodeSync::SwitchToNextAsset()
             activeMasternode.ManageState();
 
             TRY_LOCK(cs_vNodes, lockRecv);
-            if(!lockRecv) return;
+            if(!lockRecv) {
+                std::cout << "Can not ack lock" << std::endl;
+                return;
+            }
 
             BOOST_FOREACH(CNode* pnode, vNodes) {
                 netfulfilledman.AddFulfilledRequest(pnode->addr, "full-sync");
