@@ -267,7 +267,8 @@ void CMasternode::Check(bool fForce)
             return;
         }
     }
-
+    std::cout << "lastPing.sigTime " << lastPing.sigTime << std::endl;
+    std::cout << "MNNS " << MASTERNODE_MIN_MNP_SECONDS << std::endl;
     if(lastPing.sigTime - sigTime < MASTERNODE_MIN_MNP_SECONDS) {
         nActiveState = MASTERNODE_PRE_ENABLED;
         if(nActiveStatePrev != nActiveState) {
