@@ -473,9 +473,10 @@ CMasternode* CMasternodeMan::Find(const CTxIn &vin)
 CMasternode* CMasternodeMan::Find(const CPubKey &pubKeyMasternode)
 {
     LOCK(cs);
-
+    std::cout << "MasterMan::Find" << std::endl;
     BOOST_FOREACH(CMasternode& mn, vMasternodes)
     {
+        std::cout << "mn.pubKey" << mn.pubKeyMasternode.GetID().ToString() << " " << pubKeyMasternode.GetID().ToString() << std::end;
         if(mn.pubKeyMasternode == pubKeyMasternode)
             return &mn;
     }
