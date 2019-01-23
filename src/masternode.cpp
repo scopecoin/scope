@@ -267,10 +267,13 @@ void CMasternode::Check(bool fForce)
             return;
         }
     }
-    std::cout << "lastPing.sigTime " << lastPing.sigTime << std::endl;
-    std::cout << "MNNS " << MASTERNODE_MIN_MNP_SECONDS << std::endl;
+    // std::cout << "lastPing.sigTime " << lastPing.sigTime << std::endl;
+    // std::cout << "sigTime " << sigTime << std::endl;
+    // std::cout << "MNNS " << MASTERNODE_MIN_MNP_SECONDS << std::endl;
+    // std::cout << "lp - st " << lastPing.sigTime - sigTime << std::endl;
     if(lastPing.sigTime - sigTime < MASTERNODE_MIN_MNP_SECONDS) {
         nActiveState = MASTERNODE_PRE_ENABLED;
+        std::cout << "PRE ENABLED" << std::endl;
         if(nActiveStatePrev != nActiveState) {
             LogPrint("masternode", "CMasternode::Check -- Masternode %s is in %s state now\n", vin.prevout.ToStringShort(), GetStateString());
         }
@@ -278,6 +281,7 @@ void CMasternode::Check(bool fForce)
     }
 
     nActiveState = MASTERNODE_ENABLED; // OK
+    std::cout << "ENABLED OK" << std::endl;
     if(nActiveStatePrev != nActiveState) {
         LogPrint("masternode", "CMasternode::Check -- Masternode %s is in %s state now\n", vin.prevout.ToStringShort(), GetStateString());
     }
