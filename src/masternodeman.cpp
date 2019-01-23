@@ -525,7 +525,10 @@ masternode_info_t CMasternodeMan::GetMasternodeInfo(const CPubKey& pubKeyMastern
     //std::cout << "pubKeyHash " << pubKeyMasternode.GetHash() << std::endl;
     CMasternode* pMN = Find(pubKeyMasternode);
     if(!pMN)  {
+        std::cout << "MN found" << std::endl;
         return info;
+    } else {
+        std::cout << "MN not found!" << std::endl;
     }
     info = pMN->GetInfo();
     return info;
