@@ -270,7 +270,7 @@ void CMasternodeSync::ProcessTick()
                 //std::cout << "0 Masternodes" << std::endl;
                 LogPrintf("CMasternodeSync::ProcessTick -- WARNING: not enough data, restarting sync\n");
                 //std::cout << "Do not resetting, skipping" << std::endl;
-                Reset();
+                //Reset();
             } else {
                 std::vector<CNode*> vNodesCopy = CopyNodeVector();
                 governance.RequestGovernanceObjectVotes(vNodesCopy);
