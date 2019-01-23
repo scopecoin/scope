@@ -12,6 +12,7 @@
 
 #include <stdexcept>
 #include <vector>
+#include <iostream>
 
 /** 
  * secp256k1:
