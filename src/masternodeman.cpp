@@ -141,6 +141,8 @@ void CMasternodeMan::AskForMN(CNode* pnode, const CTxIn &vin)
 
     LOCK(cs);
 
+    std::cout << "AskDorMN " << pnode->addr.ToString() << std::endl;
+
     std::map<COutPoint, std::map<CNetAddr, int64_t> >::iterator it1 = mWeAskedForMasternodeListEntry.find(vin.prevout);
     if (it1 != mWeAskedForMasternodeListEntry.end()) {
         std::map<CNetAddr, int64_t>::iterator it2 = it1->second.find(pnode->addr);
@@ -525,10 +527,10 @@ masternode_info_t CMasternodeMan::GetMasternodeInfo(const CPubKey& pubKeyMastern
     //std::cout << "pubKeyHash " << pubKeyMasternode.GetHash() << std::endl;
     CMasternode* pMN = Find(pubKeyMasternode);
     if(!pMN)  {
-        std::cout << "MN found" << std::endl;
+        std::cout << "MN not found" << std::endl;
         return info;
     } else {
-        std::cout << "MN not found!" << std::endl;
+        std::cout << "MN found!" << std::endl;
     }
     info = pMN->GetInfo();
     return info;
