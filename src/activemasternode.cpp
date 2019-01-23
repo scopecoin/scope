@@ -235,7 +235,7 @@ void CActiveMasternode::ManageStateRemote()
 
     mnodeman.CheckMasternode(pubKeyMasternode);
     masternode_info_t infoMn = mnodeman.GetMasternodeInfo(pubKeyMasternode);
-    std::cout << "pubKeyMasternode" << pubKeyMasternode.GetID().toString() << std::endl;
+    std::cout << "pubKeyMasternode" << pubKeyMasternode.GetID().ToString() << std::endl;
     if(infoMn.fInfoValid) {
         if(infoMn.nProtocolVersion != PROTOCOL_VERSION) {
             nState = ACTIVE_MASTERNODE_NOT_CAPABLE;
