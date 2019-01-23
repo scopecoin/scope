@@ -267,9 +267,9 @@ void CMasternodeSync::ProcessTick()
                 Resync if we lost all masternodes from sleep/wake or failed to sync originally
             */
             if(nMnCount == 0) {
-                std::cout << "0 Masternodes" << std::endl;
+                //std::cout << "0 Masternodes" << std::endl;
                 LogPrintf("CMasternodeSync::ProcessTick -- WARNING: not enough data, restarting sync\n");
-                std::cout << "Do not resetting, skipping" << std::endl;
+                //std::cout << "Do not resetting, skipping" << std::endl;
                 //Reset();
             } else {
                 std::vector<CNode*> vNodesCopy = CopyNodeVector();

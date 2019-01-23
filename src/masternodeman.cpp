@@ -520,6 +520,7 @@ masternode_info_t CMasternodeMan::GetMasternodeInfo(const CPubKey& pubKeyMastern
 {
     masternode_info_t info;
     LOCK(cs);
+    std::cout << "pubKeyMasternode " << pubKeyMasternode << std::endl;
     CMasternode* pMN = Find(pubKeyMasternode);
     if(!pMN)  {
         return info;
