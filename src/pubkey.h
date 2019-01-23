@@ -113,6 +113,11 @@ public:
                (a.vch[0] == b.vch[0] && memcmp(a.vch, b.vch, a.size()) < 0);
     }
 
+    void Dump() const
+    {
+        std::cout << vch << std::endl;
+    }
+
     //! Implement serialization, as if this was a byte vector.
     unsigned int GetSerializeSize(int nType, int nVersion) const
     {
