@@ -577,7 +577,13 @@ bool CMasternodeBroadcast::Update(CMasternode* pmn, int& nDos)
     // IsVnAssociatedWithPubkey is validated once in CheckOutpoint, after that they just need to match
     if(pmn->pubKeyCollateralAddress != pubKeyCollateralAddress) {
         LogPrintf("CMasternodeBroadcast::Update -- Got mismatched pubKeyCollateralAddress and vin\n");
-        nDos = 33;
+        std::cout << std::endl << "pmn->pubKeyCollateralAddress" << std::endl;
+        pmn->pubKeyCollateralAddress.Dump();
+        std::cout << "String ID: " << pmn->pubKeyCollateralAddress.GetID().ToString() << std::endl << std::endl;
+        std::cout << "pubKeyCollateralAddress" << std::endl;
+        pubKeyCollateralAddress.Dump();
+        std::cout << "String ID: " << pubKeyCollateralAddress.GetID().ToString() << std::endl << std::endl;
+        //nDos = 33;
         return false;
     }
 
@@ -648,7 +654,15 @@ bool CMasternodeBroadcast::CheckOutpoint(int& nDos)
     //  - this is expensive, so it's only done once per Masternode
     if(!darkSendSigner.IsVinAssociatedWithPubkey(vin, pubKeyCollateralAddress)) {
         LogPrintf("CMasternodeMan::CheckOutpoint -- Got mismatched pubKeyCollateralAddress and vin\n");
-        nDos = 33;
+        
+        //std::cout << std::endl << "pmn->pubKeyCollateralAddress" << std::endl;
+        //pmn->pubKeyCollateralAddress.Dump();
+        //std::cout << "String ID: " << pmn->pubKeyCollateralAddress.GetID().ToString() << std::endl << std::endl;
+        std::cout << std::endl << "pubKeyCollateralAddress" << std::endl;
+        pubKeyCollateralAddress.Dump();
+        std::cout << "String ID: " << pubKeyCollateralAddress.GetID().ToString() << std::endl << std::endl;
+        std::cout << "vin.prevout.tostringshort " << vin.prevout.ToStringShort() << std::endl << std::endl;
+        //nDos = 33;
         return false;
     }
 
