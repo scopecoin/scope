@@ -141,7 +141,7 @@ void CMasternodeMan::AskForMN(CNode* pnode, const CTxIn &vin)
 
     LOCK(cs);
 
-    std::cout << "AskDorMN " << pnode->addr.ToString() << std::endl;
+    // std::cout << "AskDorMN " << pnode->addr.ToString() << std::endl;
 
     std::map<COutPoint, std::map<CNetAddr, int64_t> >::iterator it1 = mWeAskedForMasternodeListEntry.find(vin.prevout);
     if (it1 != mWeAskedForMasternodeListEntry.end()) {
@@ -473,10 +473,10 @@ CMasternode* CMasternodeMan::Find(const CTxIn &vin)
 CMasternode* CMasternodeMan::Find(const CPubKey &pubKeyMasternode)
 {
     LOCK(cs);
-    std::cout << "MasterMan::Find" << std::endl;
+    // std::cout << "MasterMan::Find" << std::endl;
     BOOST_FOREACH(CMasternode& mn, vMasternodes)
     {
-        std::cout << "mn.pubKey" << mn.pubKeyMasternode.GetID().ToString() << " " << pubKeyMasternode.GetID().ToString() << std::endl;
+        // std::cout << "mn.pubKey" << mn.pubKeyMasternode.GetID().ToString() << " " << pubKeyMasternode.GetID().ToString() << std::endl;
         if(mn.pubKeyMasternode == pubKeyMasternode)
             return &mn;
     }
@@ -523,15 +523,15 @@ masternode_info_t CMasternodeMan::GetMasternodeInfo(const CPubKey& pubKeyMastern
 {
     masternode_info_t info;
     LOCK(cs);
-    std::cout << "pubKeyMasternode" << std::endl;
+    // std::cout << "pubKeyMasternode" << std::endl;
     pubKeyMasternode.Dump();
     //std::cout << "pubKeyHash " << pubKeyMasternode.GetHash() << std::endl;
     CMasternode* pMN = Find(pubKeyMasternode);
     if(!pMN)  {
-        std::cout << "MN not found" << std::endl;
+        // std::cout << "MN not found" << std::endl;
         return info;
     } else {
-        std::cout << "MN found!" << std::endl;
+        // std::cout << "MN found!" << std::endl;
     }
     info = pMN->GetInfo();
     return info;

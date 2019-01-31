@@ -96,13 +96,13 @@ std::string CActiveMasternode::GetTypeString() const
 bool CActiveMasternode::SendMasternodePing()
 {
     if(!fPingerEnabled) {
-        std::cout << "ping is disabled" << std::endl;
+        // std::cout << "ping is disabled" << std::endl;
         LogPrint("masternode", "CActiveMasternode::SendMasternodePing -- %s: masternode ping service is disabled, skipping...\n", GetStateString());
         return false;
     }
 
     if(!mnodeman.Has(vin)) {
-        std::cout << "!mnodeman.Has(vin)" << std::endl;
+        // std::cout << "!mnodeman.Has(vin)" << std::endl;
         strNotCapableReason = "Masternode not in masternode list";
         nState = ACTIVE_MASTERNODE_NOT_CAPABLE;
         LogPrintf("CActiveMasternode::SendMasternodePing -- %s: %s\n", GetStateString(), strNotCapableReason);
@@ -235,7 +235,7 @@ void CActiveMasternode::ManageStateRemote()
 
     mnodeman.CheckMasternode(pubKeyMasternode);
     masternode_info_t infoMn = mnodeman.GetMasternodeInfo(pubKeyMasternode);
-    std::cout << "pubKeyMasternode" << pubKeyMasternode.GetID().ToString() << std::endl;
+    // std::cout << "pubKeyMasternode" << pubKeyMasternode.GetID().ToString() << std::endl;
     if(infoMn.fInfoValid) {
         if(infoMn.nProtocolVersion != PROTOCOL_VERSION) {
             nState = ACTIVE_MASTERNODE_NOT_CAPABLE;
@@ -264,7 +264,7 @@ void CActiveMasternode::ManageStateRemote()
         }
     }
     else {
-        std::cout << "NOT infoMn.fInfoValid" << std::endl;
+        // std::cout << "NOT infoMn.fInfoValid" << std::endl;
         nState = ACTIVE_MASTERNODE_NOT_CAPABLE;
         strNotCapableReason = "Masternode not in masternode list";
         LogPrintf("CActiveMasternode::ManageStateRemote -- %s: %s\n", GetStateString(), strNotCapableReason);

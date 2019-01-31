@@ -191,7 +191,7 @@ void CMasternodeSync::SwitchToNextAsset()
 
             TRY_LOCK(cs_vNodes, lockRecv);
             if(!lockRecv) {
-                std::cout << "Can not ack lock" << std::endl;
+                // std::cout << "Can not ack lock" << std::endl;
                 return;
             }
 
@@ -270,7 +270,7 @@ void CMasternodeSync::ProcessTick()
                 //std::cout << "0 Masternodes" << std::endl;
                 LogPrintf("CMasternodeSync::ProcessTick -- WARNING: not enough data, restarting sync\n");
                 //std::cout << "Do not resetting, skipping" << std::endl;
-                //Reset();
+                sReset();
             } else {
                 std::vector<CNode*> vNodesCopy = CopyNodeVector();
                 governance.RequestGovernanceObjectVotes(vNodesCopy);

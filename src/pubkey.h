@@ -116,7 +116,7 @@ public:
 
     void Dump() const
     {
-        std::cout << vch << std::endl;
+        // std::cout << vch << std::endl;
     }
 
     //! Implement serialization, as if this was a byte vector.
