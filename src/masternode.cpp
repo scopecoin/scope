@@ -273,7 +273,7 @@ void CMasternode::Check(bool fForce)
     // std::cout << "lp - st " << lastPing.sigTime - sigTime << std::endl;
     if(lastPing.sigTime - sigTime < MASTERNODE_MIN_MNP_SECONDS) {
         nActiveState = MASTERNODE_PRE_ENABLED;
-        std::cout << "PRE ENABLED" << std::endl;
+        // std::cout << "PRE ENABLED" << std::endl;
         if(nActiveStatePrev != nActiveState) {
             LogPrint("masternode", "CMasternode::Check -- Masternode %s is in %s state now\n", vin.prevout.ToStringShort(), GetStateString());
         }
