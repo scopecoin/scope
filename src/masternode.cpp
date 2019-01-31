@@ -281,7 +281,7 @@ void CMasternode::Check(bool fForce)
     }
 
     nActiveState = MASTERNODE_ENABLED; // OK
-    std::cout << "ENABLED OK" << std::endl;
+    // std::cout << "ENABLED OK" << std::endl;
     if(nActiveStatePrev != nActiveState) {
         LogPrint("masternode", "CMasternode::Check -- Masternode %s is in %s state now\n", vin.prevout.ToStringShort(), GetStateString());
     }
