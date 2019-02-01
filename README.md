@@ -12,7 +12,9 @@ Scope is a coin project to bring Authors reward function to any website. We deve
 
 Moreover rewards count and amount can be used as content popularity indicator. Read more at Reward Extension section.
 
-## Download Wallet https://dist.xscp.icu/.
+## Download Wallets
+
+https://dist.xscp.icu/.
 
 
 License
