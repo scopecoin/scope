@@ -1,22 +1,20 @@
-Scope Coin staging tree 0.12.1
+Scope Coin staging tree 0.1.2.1
 ===============================
 
-`master:` [![Build Status](https://travis-ci.org/scopepay/scope.svg?branch=master)](https://travis-ci.org/scopepay/scope) `v0.12.0.x:` [![Build Status](https://travis-ci.org/scopepay/scope.svg?branch=v0.12.0.x)](https://travis-ci.org/scopepay/scope/branches) `v0.12.1.x:` [![Build Status](https://travis-ci.org/scopepay/scope.svg?branch=v0.12.1.x)](https://travis-ci.org/scopepay/scope/branches)
-
-https://www.scope.org
+https://xscp.icu
 
 
-What is Dash?
+What is Scope?
 ----------------
 
-Dash is an experimental new digital currency that enables anonymous, instant
-payments to anyone, anywhere in the world. Dash uses peer-to-peer technology
+Scope is an experimental new digital currency that enables anonymous, instant
+payments to anyone, anywhere in the world. Scope uses peer-to-peer technology
 to operate with no central authority: managing transactions and issuing money
 are carried out collectively by the network. Scope Coin is the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Scope Coin software, see https://www.scope.org/get-scope/.
+the Scope Coin software, see https://dist.xscp.icu/.
 
 
 License
@@ -74,4 +72,4 @@ Translations are periodically pulled from Transifex and merged into the git repo
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
 
-Translators should also follow the [forum](https://www.scope.org/forum/topic/scope-worldwide-collaboration.88/).
+Translators should also follow the [forum](https://xscp.icu/forum/topic/scope-worldwide-collaboration.88/).
