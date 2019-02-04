@@ -1,6 +1,6 @@
-# Scope Coin
+# XSCP
 
-### Cryptocurrency project to serve Content Creators and Customers needs.
+## Blockchain platform to reward any content authors
 
 https://xscp.icu
 

@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Dash
-Comment=Dash P2P Cryptocurrency
-Comment[fr]=Dash, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Dash, eşten eşe kriptografik sanal para birimi
+Name=XSCP
+Comment=XSCP P2P Cryptocurrency
+Comment[fr]=XSCP, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=XSCP, eşten eşe kriptografik sanal para birimi
 Exec=scope-qt %u
 Terminal=false
 Type=Application

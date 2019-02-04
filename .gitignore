@@ -85,7 +85,7 @@ libconftest.dylib*
 *.qm
 Makefile
 scope-qt
-Dash-Qt.app
+Scope-Qt.app
 
 # Unit-tests
 Makefile.test

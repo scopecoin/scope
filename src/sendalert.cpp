@@ -57,7 +57,7 @@ void ThreadSendAlert()
     //  Higher numbers mean higher priority
     alert.nPriority     = 5000;
     alert.strComment    = "";
-    alert.strStatusBar  = "URGENT: Upgrade required: see https://www.scope.org";
+    alert.strStatusBar  = "URGENT: Upgrade required: see https://xscp.icu";
 
     // Set specific client version/versions here. If setSubVer is empty, no filtering on subver is done:
     // alert.setSubVer.insert(std::string("/Scope Coin:0.1.0.0/"));
